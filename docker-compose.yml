@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  geth:
+    build:
+      context: ./src/PrivateGeth
+      dockerfile: Dockerfile
+    # image: mathieubrun/ganache-cli
+    # command: --mnemonic "johnny mnemonic"
+  client:
+    build:
+      context: ./src/Client
+      dockerfile: Dockerfile
+    command: --node http://geth:8545

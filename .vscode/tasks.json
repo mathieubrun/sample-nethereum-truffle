@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/EventListening/EventListener/EventListener.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "go",
+            "command": "docker-compose up --build --abort-on-container-exit",
+            "type": "shell",
+            "problemMatcher": []
+        }
+    ]
+}
