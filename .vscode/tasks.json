@@ -3,17 +3,25 @@
     "tasks": [
         {
             "label": "build",
+            "dependsOn": "build contract",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/EventListening/EventListener/EventListener.csproj"
+                "${workspaceFolder}/src/Client/NethClient/NethClient.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "go",
+            "label": "run sample",
+            "dependsOn": "build contract",
             "command": "docker-compose up --build --abort-on-container-exit",
+            "type": "shell",
+            "problemMatcher": []
+        },
+        {
+            "label": "build contract",
+            "command": "docker-compose -f docker-compose.build-contract.yml up",
             "type": "shell",
             "problemMatcher": []
         }

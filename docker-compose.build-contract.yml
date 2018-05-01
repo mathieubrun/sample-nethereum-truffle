@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  truffle:
+    image: mathieubrun/truffle
+    command: compile
+    working_dir: /code/Contracts/Multiplier
+    volumes:
+      - ./src:/code

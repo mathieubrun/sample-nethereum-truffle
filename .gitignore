@@ -1,3 +1,4 @@
-bin
-obj
 .vs
+bin
+node_modules
+obj
