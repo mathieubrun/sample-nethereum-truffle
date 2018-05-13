@@ -11,13 +11,11 @@ namespace NethClient.Contracts.Multiplier
 {
     public class MultiplierContract
     {
-        private readonly Contract _contract;
         private readonly Function _multiply;
         private readonly Event _multiplied;
 
         private MultiplierContract(Contract contract)
         {
-            _contract = contract;
             _multiply = contract.GetFunction("multiply");
             _multiplied = contract.GetEvent("Multiplied");
         }
@@ -33,7 +31,7 @@ namespace NethClient.Contracts.Multiplier
 
             return receipt;
         }
-        
+
         public static MultiplierContract GetContractAt(Web3 web3, string abi, string address)
         {
             Log($"Getting contract at {address}");

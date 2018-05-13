@@ -52,8 +52,8 @@ namespace NethClient
 
                 var filterAll = await multiplyContract.CreateFilter().ConfigureAwait(false);
 
-                var receipt7 = await multiplyContract.Multiply(senderAddress, 7, 7).ConfigureAwait(false);
-                var receipt8 = await multiplyContract.Multiply(senderAddress, 8, 9).ConfigureAwait(false);
+                await multiplyContract.Multiply(senderAddress, 7, 7).ConfigureAwait(false);
+                await multiplyContract.Multiply(senderAddress, 8, 9).ConfigureAwait(false);
 
                 var changes = await multiplyContract.GetFilterChanges(filterAll).ConfigureAwait(false);
                 foreach (var evt in changes)
