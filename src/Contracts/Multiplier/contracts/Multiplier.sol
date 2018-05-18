@@ -7,9 +7,8 @@ contract Multiplier {
     event Multiplied(uint256 indexed multiplicand, uint256 indexed multiplier, address indexed sender, uint256 product);
 
     function multiply(uint256 a, uint256 b) public returns(uint r) {
-
-        r = SafeMath.mul(a, b);
-
+        //r = SafeMath.mul(a, b);
+r =a*b;
         emit Multiplied(a, b, msg.sender, r);
 
         return r;
