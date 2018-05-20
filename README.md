@@ -6,6 +6,6 @@
 docker-compose up --build --abort-on-container-exit
 ````
 
-Or run task `go` from Visual Studio code !
+Or run task `run sample` from Visual Studio code !
 
 Make sure you **never** use the provided accounts and private keys on production systems, for obvious security reasons !

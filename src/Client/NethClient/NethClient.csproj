@@ -16,6 +16,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <None Include="Contracts/**" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Contracts/**" CopyToOutputDirectory="Always" />
   </ItemGroup>
 </Project>
